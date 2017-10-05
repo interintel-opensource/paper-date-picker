@@ -21,7 +21,9 @@
   </style>
 </head>
 <body unresolved>
-  <template is="dom-bind" id="scope">
+
+<dom-bind id="scope">
+  <template>
     <section>
       <h1>{{dateFormat(date, 'LL')}}</h1>
       <paper-button class="btn" on-tap="showDialog" raised>Change Date</paper-button>
@@ -34,6 +36,8 @@
       </paper-dialog>
     </section>
   </template>
+
+</dom-bind>
   <script>
     HTMLImports.whenReady(function() {
       var scope = Polymer.dom(document).querySelector('#scope');
